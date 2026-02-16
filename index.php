@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion</title>
+    <title>Ajouter Utilisateur</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
+
+
     <?php include 'include/nav.php' ?>
-    <div class="container py5">
+    <div class="container py20">
 
         <?php
+        //--------VERIFY ACCOUNT OF ADMIN ----------//
             if (isset($_POST['connexion'])){
                 $login = $_POST['login'];
                 $password = $_POST['password'];
@@ -21,19 +24,21 @@
                     if($sqlstate->rowCount()>=1){
                         session_start();
                         $_SESSION['utilisateur']=$sqlstate->fetch();
-                        header("location:admin.php");
+                        header("location: connexion.php");
                     }else{
-        ?>
+                    ?>
                         <div class="alert alert-danger" role="alert">
                             login ou password incorrects.
                         </div>
-        <?php
+                        <?php
                     }
                     
                 }
             }
         ?>
-        <h4>Connexion</h4>
+
+
+        <h4>Ajouter Utilisateur</h4>
         <form action="" method="post">
             <div class="mb-3 mt-3 row">
                 <label class="col-sm-2 col-form-label">Email</label>
@@ -50,9 +55,5 @@
             <input type="submit" value="Connexion" class="btn btn-primary btn my-2" name="connexion">
         </form>
     </div>
-
-
-
-
 </body>
 </html>

@@ -7,10 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Ajouter utilisateur</a>
+          <a class="nav-link active" aria-current="page" href="index.php">Ajouter utilisateur</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Produis</a>
+          <a class="nav-link" href="connexion.php">Connexion</a>
         </li>
       </ul>
     </div>
