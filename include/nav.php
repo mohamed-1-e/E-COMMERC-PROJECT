@@ -56,6 +56,16 @@ if (isset($_SESSION['utilisateur'])) {
         if ($connecte) {
             // User is logged in
         ?>
+            <li class="nav-item">
+              <a class="nav-link" href="produits.php">
+                Liste des produits
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="categories.php">
+                Liste des categories
+              </a>
+            </li>
             <!-- Admin-only links -->
             <li class="nav-item">
               <a class="nav-link" href="ajouter_categorie.php">

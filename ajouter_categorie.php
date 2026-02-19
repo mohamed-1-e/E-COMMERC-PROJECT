@@ -24,6 +24,7 @@
         <!-- Page heading -->
         <h4>Ajouter Categorie</h4>
 
+
         <?php
         // =====================================================
         // CATEGORY INSERTION PROCESS
